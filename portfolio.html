@@ -24,36 +24,40 @@
   <body>
     <header class="header-line">
       <!-- Navigation side -->
-      <div class="container">
-        <div class="header-nav">
-          <nav class="navigation">
-            <a class="logo link" href="./index.html"
-              ><span class="logo-part link">Web</span>Studio</a
-            >
-            <ul class="navigation-list list">
-              <li class="nav-item">
-                <a class="nav-link link" href="./index.html">Студия</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link link active" href="./portfolio.html">Портфолио</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link link" href="#">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <!-- End navigation side -->
-
-          <!-- Contact side -->
-          <ul class="contact-header list">
-            <li class="contact-item">
-              <a class="contact-link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+      <div class="container header-nav">
+        <nav class="navigation">
+          <a class="logo link" href="./index.html"><span class="logo-part link">Web</span>Studio</a>
+          <ul class="navigation-list list">
+            <li class="nav-item">
+              <a class="nav-link link active" href="./index.html">Студия</a>
             </li>
-            <li class="contact-item">
-              <a class="contact-link link" href="tel:+380961111111">+38 096 111 11 11</a>
+            <li class="nav-item">
+              <a class="nav-link link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link" href="#">Контакты</a>
             </li>
           </ul>
-        </div>
+        </nav>
+        <!-- End navigation side -->
+
+        <!-- Contact side -->
+        <ul class="contact-header list">
+          <li class="contact-item">
+            <a class="contact-link link" href="mailto:info@devstudio.com">
+              <svg class="icons-contact" width="16px" height="12px">
+                <use href="./images/icons.svg#icon-envelope"></use></svg
+              >info@devstudio.com</a
+            >
+          </li>
+          <li class="contact-item">
+            <a class="contact-link link" href="tel:+380961111111">
+              <svg class="icons-contact" width="10px" height="16px">
+                <use href="./images/icons.svg#icon-smartphone"></use></svg
+              >+38 096 111 11 11</a
+            >
+          </li>
+        </ul>
       </div>
       <!-- End contact side-->
     </header>
@@ -183,29 +187,64 @@
     </main>
     <footer class="footer-section">
       <!-- Footer side -->
-      <div class="container">
-        <a class="logo link" href="#"
-          ><span class="logo-part">Web</span><span class="logo-part-white">Studio</span></a
-        >
-        <address class="address-footer">
-          <ul class="address-list list">
-            <li class="address-item">
-              <a
-                class="address-link link"
-                href="https://goo.gl/maps/BJqGb4uzTvTz6RYZ6"
-                target="_blank"
-                rel="nofollow noreferrer noopener"
-                ><span class="address-first">г. Киев, пр-т Леси Украинки, 26</span></a
-              >
+      <div class="container footer-box">
+        <div class="address-box">
+          <a class="logo link" href="#"
+            ><span class="logo-part">Web</span><span class="logo-part-white">Studio</span></a
+          >
+          <address class="address-footer">
+            <ul class="address-list list">
+              <li class="address-item">
+                <a
+                  class="address-link link"
+                  href="https://goo.gl/maps/BJqGb4uzTvTz6RYZ6"
+                  target="_blank"
+                  rel="nofollow noreferrer noopener"
+                  ><span class="address-first">г. Киев, пр-т Леси Украинки, 26</span></a
+                >
+              </li>
+              <li class="address-item">
+                <a class="address-link link" href="mailto:info@example.com">info@example.com</a>
+              </li>
+              <li class="address-item">
+                <a class="address-link link" href="tel:+380991111111">+38 099 111 11 11</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="join">
+          <h3 class="join-subtitle">Присоединяйтесь</h3>
+          <ul class="join-icons list">
+            <li class="icon-list-join">
+              <a class="icon-link-join link" href="#" target="_blank">
+                <svg class="icons-join">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
             </li>
-            <li class="address-item">
-              <a class="address-link link" href="mailto:info@example.com">info@example.com</a>
+            <li class="icon-list-join">
+              <a class="icon-link-join link" href="#" target="_blank">
+                <svg class="icons-join">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
             </li>
-            <li class="address-item">
-              <a class="address-link link" href="tel:+380991111111">+38 099 111 11 11</a>
+            <li class="icon-list-join">
+              <a class="icon-link-join link" href="#" target="_blank">
+                <svg class="icons-join">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="icon-list-join">
+              <a class="icon-link-join link" href="#" target="_blank">
+                <svg class="icons-join">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
             </li>
           </ul>
-        </address>
+        </div>
       </div>
       <!-- End footer side-->
     </footer>

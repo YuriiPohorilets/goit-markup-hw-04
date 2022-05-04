@@ -10,7 +10,9 @@ Background button color (bg btn):       #F5F4FA;
 Background color (bg):                  #2F303A;
 Header line color (border):             #ececec;
 Border card (border):                   #eeeeee;
+Icon color:                             #AFB1B8;
 Gradient overlay (action box):          rgba(47, 48, 58, 0.4);
+Opacity white (icon bg):                rgba(255, 255, 255, 0.1);
 
 Team card shadow:                       0px 1px 3px rgba(0, 0, 0, 0.12),
                                         0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -23,6 +25,10 @@ Button shadow (btn shadow):             0px 3px 1px rgba(0, 0, 0, 0.1),
 Main button shadow (order-btn):         0px 4px 4px rgba(0, 0, 0, 0.15);
 
 Main button hover shadow (order-btn):   0px 4px 4px rgba(0, 0, 0, 0.25);
+
+Gallery card shadow (gallery-item):     0px 1px 1px rgba(0, 0, 0, 0.12), 
+                                        0px 4px 4px rgba(0, 0, 0, 0.06),
+                                        1px 4px 6px rgba(0, 0, 0, 0.16)
 
 Margin gallery card:                    30px;
 */
@@ -40,7 +46,9 @@ Margin gallery card:                    30px;
   --bg-color: #2f303a;
   --header-line: #ececec;
   --border-card: #eeeeee;
+  --icon-color: #afb1b8;
   --gradient-overlay: rgba(47, 48, 58, 0.4);
+  --opacity-white-bg: rgba(255, 255, 255, 0.1);
 
   --team-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -50,6 +58,9 @@ Margin gallery card:                    30px;
 
   --main-btn-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   --hover-btn-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  --gallery-card-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 
   --gallery-gap: 30px;
 }
@@ -87,6 +98,7 @@ img {
 
 .link {
   text-decoration: none;
+  color: currentColor;
 }
 
 .container {
@@ -105,7 +117,6 @@ img {
   font-size: 26px;
   line-height: 1.2;
   letter-spacing: 0.03em;
-
   color: var(--active-black);
 }
 
@@ -144,10 +155,9 @@ img {
 }
 
 .nav-link {
+  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-  display: block;
-
   color: var(--pimary-text);
 }
 
@@ -162,11 +172,13 @@ img {
 
 /* Header contact */
 .contact-header {
-  margin-left: auto;
   display: flex;
+  margin-left: auto;
 }
 
 .contact-item {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -177,12 +189,20 @@ img {
 }
 
 .contact-link {
+  display: flex;
+  align-items: center;
+
   color: var(--secondary-text);
 }
 
 .contact-link:hover,
 .contact-link:focus {
   color: var(--focus-color);
+}
+
+.icons-contact {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 /* Active side */
@@ -205,7 +225,6 @@ img {
   font-size: 44px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-
   color: var(--active-white);
 }
 
@@ -265,15 +284,16 @@ img {
 }
 
 .advantage-box {
-  flex-basis: calc((100% - 90px) / 4);
   margin-right: 30px;
+  flex-basis: calc((100% - 90px) / 4);
 }
 
 .advantage-box:nth-child(4n) {
   margin-right: 0px;
 }
 
-.advantage-subtitle {
+.advantage-subtitle,
+.join-subtitle {
   margin-bottom: 10px;
 
   font-weight: 700;
@@ -290,6 +310,21 @@ img {
   letter-spacing: 0.03em;
 }
 
+.advantage-icons {
+  margin-bottom: 30px;
+  padding: 25px 100px;
+  text-align: center;
+
+  background-color: var(--bg-btn-color);
+  border-radius: 4px;
+}
+
+.icons-advantage {
+  display: block;
+  width: 70px;
+  height: 70px;
+}
+
 /* About us section */
 .about-us-section {
   padding-top: 0px;
@@ -297,7 +332,6 @@ img {
 
 .about-us-list {
   display: flex;
-  /* flex-wrap: wrap; */
 }
 
 .about-us-item:not(:last-child) {
@@ -338,6 +372,7 @@ img {
 }
 
 .team-position {
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.2;
   letter-spacing: 0.03em;
@@ -348,11 +383,71 @@ img {
   padding-bottom: var(--gallery-gap);
 }
 
+.team-icons,
+.clients-icons {
+  display: flex;
+  justify-content: center;
+  color: var(--icon-color);
+}
+
+.icon-list-team:not(:last-child) {
+  margin-right: 10px;
+}
+
+.icon-link-team {
+  display: flex;
+  padding: 12px;
+  border-radius: 50%;
+}
+
+.icons-team {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.icon-link-team:hover,
+.icon-link-team:focus {
+  color: var(--active-white);
+  background-color: var(--focus-color);
+}
+
+/* Clients section */
+.icon-list-clients:not(:last-child) {
+  margin-right: 30px;
+}
+
+.icon-link-clients {
+  display: flex;
+  padding: 15px 31px;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+}
+
+.icons-clients {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
+}
+
+.icon-link-clients:hover,
+.icon-link-clients:focus {
+  color: var(--focus-color);
+  border-color: var(--focus-color);
+}
+
 /* Footer */
 .footer-section {
   padding: 60px 0px;
-
   background-color: var(--bg-color);
+}
+
+.footer-box {
+  display: flex;
+}
+
+.address-box {
+  margin-right: 70px;
 }
 
 .address-footer {
@@ -389,12 +484,50 @@ img {
   color: var(--focus-color);
 }
 
+/* Join section */
+.join {
+  margin-top: 12px;
+}
+
+.join-subtitle {
+  color: var(--active-white);
+  margin-bottom: 20px;
+}
+
+.join-icons {
+  display: flex;
+}
+
+.icon-list-join:not(:last-child) {
+  margin-right: 10px;
+}
+
+.icon-link-join {
+  display: flex;
+  padding: 12px;
+  color: var(--active-white);
+  background-color: var(--opacity-white-bg);
+  border-radius: 50%;
+}
+
+.icons-join {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.icon-link-join:hover,
+.icon-link-join:focus {
+  color: var(--active-white);
+  background-color: var(--focus-color);
+}
+
 /* Portfolio.html */
 /* Filter */
 .filter.list {
   display: flex;
-  margin-bottom: 50px;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .filter-item:not(:last-child) {
@@ -444,6 +577,11 @@ img {
   margin-left: var(--gallery-gap);
 
   background-color: var(--active-white);
+}
+
+.gallery-item:hover,
+.gallery-item:focus {
+  box-shadow: var(--gallery-card-shadow);
 }
 
 .gallery-sign {
