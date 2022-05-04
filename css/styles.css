@@ -208,6 +208,10 @@ img {
 /* Active side */
 .action-box {
   padding: 200px 0px;
+  margin: 0 auto;
+  max-width: 1600px;
+  height: 600px;
+
   text-align: center;
 
   background-color: var(--bg-color);
@@ -396,7 +400,11 @@ img {
 
 .icon-link-team {
   display: flex;
-  padding: 12px;
+  height: 44px;
+  width: 44px;
+  justify-content: center;
+  align-items: center;
+
   border-radius: 50%;
 }
 
@@ -419,7 +427,11 @@ img {
 
 .icon-link-clients {
   display: flex;
-  padding: 15px 31px;
+  width: 170px;
+  height: 92px;
+  justify-content: center;
+  align-items: center;
+
   border: 1px solid currentColor;
   border-radius: 4px;
 }
@@ -504,7 +516,10 @@ img {
 
 .icon-link-join {
   display: flex;
-  padding: 12px;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
   color: var(--active-white);
   background-color: var(--opacity-white-bg);
   border-radius: 50%;
